@@ -1,0 +1,45 @@
+---------- Machine Learnig And Deep Learnig .............
+https://github.com/pkmital/CADL
+
+1. https://www.bazel.build/versions/master/docs/getting-started.html
+2. https://www.bazel.build/versions/master/docs/external.html
+
+----------------- best CROSS COMPILATION ----------
+ > https://github.com/snipsco/tensorflow-build
+ > http://biophysics.med.jhmi.edu/~yliu120/tensorflow.html
+            -- about CROSSTOOL ---
+ > https://github.com/bazelbuild/bazel/wiki/About-the-CROSSTOOL
+            --- issues ---
+ > https://github.com/bazelbuild/bazel/issues/1353
+
+******************* UseFull Links: ********************************
+1. https://bazel.build/versions/master/docs/be/c-cpp.html 
+       (rules for C/C++ to add in BUILD file)
+
+BUILDROOT:
+https://github.com/bazelbuild/bazel/wiki/Building-with-a-custom-toolchain
+
+
++++++++++++++++++++++ COmmands to compile a Porject +++++++++++++++++++++++++
+ $ bazel build  [form the root of the project]
+ $ bazel build main(src folder name):main (file name binary)
+
+
+
+--------------------- Tensor Flow --------------------
+Installation ...
+    https://tensorflow.github.io/serving/setup.html
+
+    https://alliseesolutions.wordpress.com/2016/09/08/install-gpu-tensorflow-from-sources-w-ubuntu-16-04-and-cuda-8-0-rc/
+
+TensorFlow for C:
+    https://www.tensorflow.org/versions/master/install/install_c
+
+---copilation using make file----
+https://github.com/tensorflow/tensorflow/blob/master/tensorflow/contrib/makefile/README.md
+
+
+
+
+
+bazel build $BAZEL_FLAGS -c opt --copt="-march=armv6" --copt="-mfpu=vfp" --copt="-funsafe-math-optimizations" --copt="-ftree-vectorize" --copt="-fomit-frame-pointer" tensorflow:libtensorflow.so --cpu=armeabi --crosstool_top=//tools/arm_compiler:toolchain --verbose_failures
